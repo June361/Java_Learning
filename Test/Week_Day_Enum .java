@@ -1,0 +1,1 @@
+enum Week_Day_Enum { Mon, Tue, Wed, Thu, Fri, Sat, Sun }
