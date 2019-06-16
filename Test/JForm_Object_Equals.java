@@ -25,8 +25,8 @@ import javax.xml.parsers.ParserConfigurationException;
 /**
  * @author June Chen
  */
-public class JForm_XML_Parse extends JFrame {
-    public void JForm_XML_Parse() {
+public class JForm_Object_Equals extends JFrame {
+    public void JForm__Object_Equals() {
 
         initComponents();
 
@@ -152,7 +152,7 @@ public class JForm_XML_Parse extends JFrame {
     public void JForm()
     {
         initComponents();
-        JFrame f = new JFrame("JForm_XML Parse");
+        JFrame f = new JFrame("JFrom_Object_Equals");
         f.getContentPane().add(panel1);
         f.setSize(700,495);             // 设置组件的大小
         f.setBackground(Color.WHITE);  // 将背景设置成白色
