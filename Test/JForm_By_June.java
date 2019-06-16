@@ -38,6 +38,8 @@ public class JForm_By_June extends JPanel
     private JButton button17;
     private JButton button18;
     private JButton button19;
+    private JButton button20;
+    private JButton button21;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
 
@@ -48,8 +50,8 @@ public class JForm_By_June extends JPanel
 
     private void button1MouseClicked(MouseEvent e) {
         // TODO add your code here
-        JForm_XML_Test jForm_XML_Test=new JForm_XML_Test();
-        jForm_XML_Test.JForm();
+        JForm_XML_Parse jForm_XML_Parse=new JForm_XML_Parse();
+        jForm_XML_Parse.JForm();
     }
 
     private void button2MouseClicked(MouseEvent e) {
@@ -136,6 +138,18 @@ public class JForm_By_June extends JPanel
         jForm_Email.JForm();
     }
 
+    private void button20MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        JForm_String_Args jForm_String_Args=new JForm_String_Args();
+        jForm_String_Args.JForm();
+    }
+
+    private void button21MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        JForm_JTree jForm_JTree=new JForm_JTree();
+        jForm_JTree.JForm();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
@@ -159,6 +173,8 @@ public class JForm_By_June extends JPanel
         button17 = new JButton();
         button18 = new JButton();
         button19 = new JButton();
+        button20 = new JButton();
+        button21 = new JButton();
 
         //======== this ========
         setLayout(null);
@@ -176,7 +192,7 @@ public class JForm_By_June extends JPanel
         menu1.setBounds(new Rectangle(new Point(0, 0), menu1.getPreferredSize()));
 
         //---- button1 ----
-        button1.setText("XML_Test");
+        button1.setText("XML_Parse");
         button1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -384,7 +400,29 @@ public class JForm_By_June extends JPanel
         add(button19);
         button19.setBounds(385, 200, 100, 24);
 
-        setPreferredSize(new Dimension(515, 300));
+        //---- button20 ----
+        button20.setText("String[] args");
+        button20.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button20MouseClicked(e);
+            }
+        });
+        add(button20);
+        button20.setBounds(385, 235, 100, 24);
+
+        //---- button21 ----
+        button21.setText("JTree");
+        button21.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button21MouseClicked(e);
+            }
+        });
+        add(button21);
+        button21.setBounds(500, 95, 100, 24);
+
+        setPreferredSize(new Dimension(705, 300));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -394,10 +432,14 @@ public class JForm_By_June extends JPanel
         JFrame f = new JFrame("JForm_By_June");
 
         f.getContentPane().add(new JForm_By_June());
-        f.setSize(530,400) ;             // 设置组件的大小
+        f.setSize(630,400) ;             // 设置组件的大小
         f.setLocation(300,200) ;                 // 设置组件的显示位置
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         f.setLocationRelativeTo( null);
         f.setVisible(true);
+
+        Value_Table_Static.string1=args[0];
+        Value_Table_Static.string2=args[1];
+        Value_Table_Static.string3=args[2];
     }
 }

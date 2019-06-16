@@ -22,7 +22,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "XML_Test"
+				"text": "XML_Parse"
 				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 35
@@ -208,9 +208,29 @@ new FormModel {
 				"x": 385
 				"y": 200
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button20"
+				"text": "String[] args"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button20MouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 100
+				"height": 24
+				"x": 385
+				"y": 235
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button21"
+				"text": "JTree"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button21MouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 100
+				"height": 24
+				"x": 500
+				"y": 95
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 515, 300 )
+			"size": new java.awt.Dimension( 705, 300 )
 		} )
 	}
 }
