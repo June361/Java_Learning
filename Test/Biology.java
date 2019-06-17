@@ -15,4 +15,12 @@ public class Biology{
     public String introduction() {
         return "大家好！我的性别是"+ sex + "。年龄是" + age + "。";
     }
+
+    @Override
+    public String toString() {
+        return "Biology{" +
+                "sex='" + sex + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

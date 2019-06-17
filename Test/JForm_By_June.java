@@ -40,6 +40,8 @@ public class JForm_By_June extends JPanel
     private JButton button19;
     private JButton button20;
     private JButton button21;
+    private JButton button22;
+    private JButton button23;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
 
@@ -150,6 +152,18 @@ public class JForm_By_June extends JPanel
         jForm_JTree.JForm();
     }
 
+    private void button22MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        JForm_Object jForm_Object=new JForm_Object();
+        jForm_Object.JForm();
+    }
+
+    private void button23MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        JForm_Variable_Arguments jForm_Variable_Arguments=new JForm_Variable_Arguments();
+        jForm_Variable_Arguments.JForm();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
@@ -175,6 +189,8 @@ public class JForm_By_June extends JPanel
         button19 = new JButton();
         button20 = new JButton();
         button21 = new JButton();
+        button22 = new JButton();
+        button23 = new JButton();
 
         //======== this ========
         setLayout(null);
@@ -214,7 +230,7 @@ public class JForm_By_June extends JPanel
         button2.setBounds(35, 130, 100, button2.getPreferredSize().height);
 
         //---- button3 ----
-        button3.setText("Enum");
+        button3.setText("Enumeration");
         button3.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -421,6 +437,28 @@ public class JForm_By_June extends JPanel
         });
         add(button21);
         button21.setBounds(500, 95, 100, 24);
+
+        //---- button22 ----
+        button22.setText("Object");
+        button22.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button22MouseClicked(e);
+            }
+        });
+        add(button22);
+        button22.setBounds(500, 130, 100, 24);
+
+        //---- button23 ----
+        button23.setText("Variable args");
+        button23.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button23MouseClicked(e);
+            }
+        });
+        add(button23);
+        button23.setBounds(500, 165, 100, 24);
 
         setPreferredSize(new Dimension(705, 300));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
