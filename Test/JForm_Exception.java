@@ -57,7 +57,7 @@ public class JForm_Exception extends JFrame {
     private void button1MouseClicked(MouseEvent e) {
         // TODO add your code here
         String string1="";
-        
+
         string1=Integer.toString(Test_of_Exception());
         textPane1.setText(string1);
     }
@@ -74,7 +74,7 @@ public class JForm_Exception extends JFrame {
             panel1.setLayout(null);
 
             //---- button1 ----
-            button1.setText("Variable_Arguments");
+            button1.setText("Exceptoin");
             button1.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
