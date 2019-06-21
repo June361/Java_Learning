@@ -62,12 +62,23 @@ public class JForm_Exception extends JFrame {
         textPane1.setText(string1);
     }
 
+    private void button2MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        Exception_Chain_Test exception_Chain_Test=new Exception_Chain_Test();
+        try {
+            exception_Chain_Test.Exception_Test2();
+        }catch (Exception e2){
+            e2.printStackTrace();
+        }
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panel1 = new JPanel();
         button1 = new JButton();
         scrollPane1 = new JScrollPane();
         textPane1 = new JTextPane();
+        button2 = new JButton();
 
         //======== panel1 ========
         {
@@ -91,6 +102,18 @@ public class JForm_Exception extends JFrame {
             panel1.add(scrollPane1);
             scrollPane1.setBounds(30, 45, 625, 390);
 
+            //---- button2 ----
+            button2.setText("Exceptoin Chain Test");
+            button2.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button2MouseClicked(e);
+                    button2MouseClicked(e);
+                }
+            });
+            panel1.add(button2);
+            button2.setBounds(130, 10, 150, 24);
+
             panel1.setPreferredSize(new Dimension(690, 455));
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
@@ -101,11 +124,12 @@ public class JForm_Exception extends JFrame {
     private JButton button1;
     private JScrollPane scrollPane1;
     private JTextPane textPane1;
+    private JButton button2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {
         initComponents();
-        JFrame f = new JFrame("JFrom_Object_Equals");
+        JFrame f = new JFrame("JFrom_Exception");
         f.getContentPane().add(panel1);
         f.setSize(700,495);             // 设置组件的大小
         f.setBackground(Color.WHITE);  // 将背景设置成白色
