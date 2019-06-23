@@ -25,31 +25,16 @@ import javax.xml.parsers.ParserConfigurationException;
 /**
  * @author June Chen
  */
-public class JForm_Throw_and_Throws extends JFrame {
-    public void JForm_Throw_and_Throws() {
-
+public class JForm_Collection extends JFrame {
+    public void JForm_Collection() {
         initComponents();
-
     }
-    private void divide(int one,int two)throws Exception{
-        if(two==0){
-            System.out.println("除数不能为0！");
-        }else{
-            System.out.println("The result is"+one/two);
-        }
 
-    }
 
     private void button1MouseClicked(MouseEvent e) {
         // TODO add your code here
-        String string1="";
-
-        try {
-            divide(5,0);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        textPane1.setText(string1);
+         List_Collection_Test list_Collection_Test=new List_Collection_Test();
+        list_Collection_Test.Add_List_Collection_Test();
     }
 
     private void initComponents() {
@@ -64,7 +49,7 @@ public class JForm_Throw_and_Throws extends JFrame {
             panel1.setLayout(null);
 
             //---- button1 ----
-            button1.setText("Exceptoin");
+            button1.setText("Add_Course_to_Select");
             button1.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {

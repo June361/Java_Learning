@@ -43,6 +43,7 @@ public class JForm_By_June extends JPanel
     private JButton button22;
     private JButton button23;
     private JButton button24;
+    private JButton button25;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
 
@@ -171,6 +172,12 @@ public class JForm_By_June extends JPanel
         jForm_Exception.JForm();
     }
 
+    private void button25MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        JForm_Collection jForm_Collection=new JForm_Collection();
+        jForm_Collection.JForm();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
@@ -199,6 +206,7 @@ public class JForm_By_June extends JPanel
         button22 = new JButton();
         button23 = new JButton();
         button24 = new JButton();
+        button25 = new JButton();
 
         //======== this ========
         setLayout(null);
@@ -479,7 +487,18 @@ public class JForm_By_June extends JPanel
         add(button24);
         button24.setBounds(500, 200, 100, 24);
 
-        setPreferredSize(new Dimension(705, 300));
+        //---- button25 ----
+        button25.setText("Collection");
+        button25.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button25MouseClicked(e);
+            }
+        });
+        add(button25);
+        button25.setBounds(500, 235, 100, 24);
+
+        setPreferredSize(new Dimension(705, 325));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
