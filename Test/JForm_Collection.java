@@ -88,6 +88,14 @@ public class JForm_Collection extends JFrame {
         list_Collection_Test.getCourse_to_Select().remove(4);
     }
 
+    private void button5MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        Course_Collection_Test course_Collection_Test=new Course_Collection_Test("8","大学语文");
+        List_Generics  list_Generics=new List_Generics();
+        list_Generics.getCourse().add(course_Collection_Test);
+        list_Generics.getCourse().add(course_Collection_Test);
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panel1 = new JPanel();
@@ -97,6 +105,7 @@ public class JForm_Collection extends JFrame {
         button2 = new JButton();
         button3 = new JButton();
         button4 = new JButton();
+        button5 = new JButton();
 
         //======== panel1 ========
         {
@@ -153,6 +162,17 @@ public class JForm_Collection extends JFrame {
             panel1.add(button4);
             button4.setBounds(30, 45, 156, 24);
 
+            //---- button5 ----
+            button5.setText("List Generics");
+            button5.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button5MouseClicked(e);
+                }
+            });
+            panel1.add(button5);
+            button5.setBounds(200, 45, 156, 24);
+
             panel1.setPreferredSize(new Dimension(690, 455));
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
@@ -166,6 +186,7 @@ public class JForm_Collection extends JFrame {
     private JButton button2;
     private JButton button3;
     private JButton button4;
+    private JButton button5;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {
