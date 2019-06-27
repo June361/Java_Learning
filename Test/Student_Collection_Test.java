@@ -6,7 +6,7 @@ public class Student_Collection_Test{
     private String ID;
     private String Name;
 
-    public Set courses;
+    public Set<Course_Collection_Test> courses;
 
 
     public String getID() {

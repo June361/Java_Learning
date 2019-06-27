@@ -32,6 +32,7 @@ public class JForm_Collection extends JFrame {
 
     List_Collection_Test list_Collection_Test=new List_Collection_Test();
 
+    Set_Collection_Test set_Collection_Test=new Set_Collection_Test();
 
     private void button1MouseClicked(MouseEvent e) {
         // TODO add your code here
@@ -96,23 +97,57 @@ public class JForm_Collection extends JFrame {
         list_Generics.getCourse().add(course_Collection_Test);
     }
 
+    private void button6MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        Course_Collection_Test course_1=new Course_Collection_Test("1","数据结构");
+        set_Collection_Test.getCourse_to_Select().add(course_1);
+        Course_Collection_Test Temp_1=(Course_Collection_Test)set_Collection_Test.getCourse_to_Select().get(0);
+        System.out.println("添加了课程："+Temp_1.getID()+":"+Temp_1.getName());
+
+        Course_Collection_Test course_2=new Course_Collection_Test("2","C语言");
+        set_Collection_Test.getCourse_to_Select().add(course_2);
+        Course_Collection_Test Temp_2=(Course_Collection_Test)set_Collection_Test.getCourse_to_Select().get(1);
+        System.out.println("添加了课程："+Temp_2.getID()+":"+Temp_2.getName());
+
+        Course_Collection_Test course_3=new Course_Collection_Test("3","高等数学");
+        set_Collection_Test.getCourse_to_Select().add(course_3);
+        Course_Collection_Test Temp_3=(Course_Collection_Test)set_Collection_Test.getCourse_to_Select().get(2);
+        System.out.println("添加了课程："+Temp_3.getID()+":"+Temp_3.getName());
+
+        Course_Collection_Test course_4=new Course_Collection_Test("4","大学英语");
+        set_Collection_Test.getCourse_to_Select().add(course_4);
+        Course_Collection_Test Temp_4=(Course_Collection_Test)set_Collection_Test.getCourse_to_Select().get(3);
+        System.out.println("添加了课程："+Temp_4.getID()+":"+Temp_4.getName());
+
+        Course_Collection_Test course_5=new Course_Collection_Test("5","大学物理");
+        set_Collection_Test.getCourse_to_Select().add(course_5);
+        Course_Collection_Test Temp_5=(Course_Collection_Test)set_Collection_Test.getCourse_to_Select().get(4);
+        System.out.println("添加了课程："+Temp_5.getID()+":"+Temp_5.getName());
+
+        Course_Collection_Test course_6=new Course_Collection_Test("6","汇编语言");
+        set_Collection_Test.getCourse_to_Select().add(course_6);
+        Course_Collection_Test Temp_6=(Course_Collection_Test)set_Collection_Test.getCourse_to_Select().get(5);
+        System.out.println("添加了课程："+Temp_6.getID()+":"+Temp_6.getName());
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panel1 = new JPanel();
         button1 = new JButton();
-        scrollPane1 = new JScrollPane();
-        textPane1 = new JTextPane();
         button2 = new JButton();
         button3 = new JButton();
         button4 = new JButton();
         button5 = new JButton();
+        button6 = new JButton();
+        scrollPane1 = new JScrollPane();
+        textPane1 = new JTextPane();
 
         //======== panel1 ========
         {
             panel1.setLayout(null);
 
             //---- button1 ----
-            button1.setText("Add_Course_to_Select");
+            button1.setText("Add_Course_to_Select<List>");
             button1.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -121,13 +156,6 @@ public class JForm_Collection extends JFrame {
             });
             panel1.add(button1);
             button1.setBounds(new Rectangle(new Point(30, 10), button1.getPreferredSize()));
-
-            //======== scrollPane1 ========
-            {
-                scrollPane1.setViewportView(textPane1);
-            }
-            panel1.add(scrollPane1);
-            scrollPane1.setBounds(30, 80, 625, 355);
 
             //---- button2 ----
             button2.setText("Read_Course_to_Select");
@@ -138,7 +166,7 @@ public class JForm_Collection extends JFrame {
                 }
             });
             panel1.add(button2);
-            button2.setBounds(200, 10, 156, 24);
+            button2.setBounds(235, 10, 195, 24);
 
             //---- button3 ----
             button3.setText("Modify_Course_to_Select");
@@ -149,7 +177,7 @@ public class JForm_Collection extends JFrame {
                 }
             });
             panel1.add(button3);
-            button3.setBounds(370, 10, 156, 24);
+            button3.setBounds(445, 10, 195, 24);
 
             //---- button4 ----
             button4.setText("Remove_Course_to_Select");
@@ -160,7 +188,7 @@ public class JForm_Collection extends JFrame {
                 }
             });
             panel1.add(button4);
-            button4.setBounds(30, 45, 156, 24);
+            button4.setBounds(30, 45, 195, 24);
 
             //---- button5 ----
             button5.setText("List Generics");
@@ -171,7 +199,25 @@ public class JForm_Collection extends JFrame {
                 }
             });
             panel1.add(button5);
-            button5.setBounds(200, 45, 156, 24);
+            button5.setBounds(235, 45, 195, 24);
+
+            //---- button6 ----
+            button6.setText("Add_Course_to_Select<Set>");
+            button6.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button6MouseClicked(e);
+                }
+            });
+            panel1.add(button6);
+            button6.setBounds(445, 45, 195, 24);
+
+            //======== scrollPane1 ========
+            {
+                scrollPane1.setViewportView(textPane1);
+            }
+            panel1.add(scrollPane1);
+            scrollPane1.setBounds(30, 80, 625, 355);
 
             panel1.setPreferredSize(new Dimension(690, 455));
         }
@@ -181,12 +227,13 @@ public class JForm_Collection extends JFrame {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel panel1;
     private JButton button1;
-    private JScrollPane scrollPane1;
-    private JTextPane textPane1;
     private JButton button2;
     private JButton button3;
     private JButton button4;
     private JButton button5;
+    private JButton button6;
+    private JScrollPane scrollPane1;
+    private JTextPane textPane1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {
