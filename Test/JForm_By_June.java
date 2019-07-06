@@ -44,6 +44,9 @@ public class JForm_By_June extends JPanel
     private JButton button23;
     private JButton button24;
     private JButton button25;
+    private JButton button26;
+    private JButton button27;
+    private JButton button28;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
 
@@ -178,6 +181,27 @@ public class JForm_By_June extends JPanel
         jForm_Collection.JForm();
     }
 
+    private void button26MouseClicked(MouseEvent e) {
+        // TODO add your code here
+    }
+
+    /**
+     * Java Socket通信测试
+     * @param e
+     */
+
+    private void button27MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        JForm_Socket jForm_Socket=new JForm_Socket();
+        jForm_Socket.JForm();
+    }
+
+    private void button28MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        JForm_File jForm_File=new JForm_File();
+        jForm_File.JForm();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
@@ -207,6 +231,9 @@ public class JForm_By_June extends JPanel
         button23 = new JButton();
         button24 = new JButton();
         button25 = new JButton();
+        button26 = new JButton();
+        button27 = new JButton();
+        button28 = new JButton();
 
         //======== this ========
         setLayout(null);
@@ -498,7 +525,40 @@ public class JForm_By_June extends JPanel
         add(button25);
         button25.setBounds(500, 235, 100, 24);
 
-        setPreferredSize(new Dimension(705, 325));
+        //---- button26 ----
+        button26.setText("Map");
+        button26.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button26MouseClicked(e);
+            }
+        });
+        add(button26);
+        button26.setBounds(615, 95, 100, 24);
+
+        //---- button27 ----
+        button27.setText("Socket");
+        button27.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button27MouseClicked(e);
+            }
+        });
+        add(button27);
+        button27.setBounds(615, 130, 100, 24);
+
+        //---- button28 ----
+        button28.setText("File");
+        button28.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button28MouseClicked(e);
+            }
+        });
+        add(button28);
+        button28.setBounds(615, 165, 100, 24);
+
+        setPreferredSize(new Dimension(770, 325));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -508,7 +568,7 @@ public class JForm_By_June extends JPanel
         JFrame f = new JFrame("JForm_By_June");
 
         f.getContentPane().add(new JForm_By_June());
-        f.setSize(630,400) ;             // 设置组件的大小
+        f.setSize(780,400) ;             // 设置组件的大小
         f.setLocation(300,200) ;                 // 设置组件的显示位置
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         f.setLocationRelativeTo( null);
