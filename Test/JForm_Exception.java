@@ -72,6 +72,20 @@ public class JForm_Exception extends JFrame {
         }
     }
 
+    private void button3MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        try {
+            throw new Exception("My Exception");
+        } catch (Exception e1) {
+            System.err.println("Caught Exception");//System.err.println();输出字体为红色  System.out.println();输出字体为普通黑色
+            System.err.println("getMessage():" + e1.getMessage());//获取异常信息
+            System.err.println("getLocalizedMessage():"+ e1.getLocalizedMessage());//
+            System.err.println("toString():" + e1);//打印整个异常对象
+            System.err.println("printStackTrace():");
+            e1.printStackTrace();
+        }
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panel1 = new JPanel();
@@ -79,6 +93,7 @@ public class JForm_Exception extends JFrame {
         scrollPane1 = new JScrollPane();
         textPane1 = new JTextPane();
         button2 = new JButton();
+        button3 = new JButton();
 
         //======== panel1 ========
         {
@@ -108,11 +123,21 @@ public class JForm_Exception extends JFrame {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     button2MouseClicked(e);
-                    button2MouseClicked(e);
                 }
             });
             panel1.add(button2);
             button2.setBounds(130, 10, 150, 24);
+
+            //---- button3 ----
+            button3.setText("Throw My Exception");
+            button3.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button3MouseClicked(e);
+                }
+            });
+            panel1.add(button3);
+            button3.setBounds(295, 10, 150, 24);
 
             panel1.setPreferredSize(new Dimension(690, 455));
         }
@@ -125,6 +150,7 @@ public class JForm_Exception extends JFrame {
     private JScrollPane scrollPane1;
     private JTextPane textPane1;
     private JButton button2;
+    private JButton button3;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {

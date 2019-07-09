@@ -1,13 +1,12 @@
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
 import javax.swing.*;
+import java.lang.Class;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 /*
  * Created by JFormDesigner on Sun Jun 02 15:30:46 CST 2019
@@ -18,50 +17,23 @@ import javax.swing.*;
 /**
  * @author June Chen
  */
-public class JForm_File extends JFrame {
-    public void JForm_File() {
+public class JForm_Reflect extends JFrame {
+    public void JForm_Reflect() {
         initComponents();
     }
 
     private void button1MouseClicked(MouseEvent e) {
         // TODO add your code here
-        try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("My_File.txt"));
-            bufferedWriter.write("June Chen");
-            bufferedWriter.close();
-            System.out.println("The file is be created.");
-        }
-        catch (IOException e1) {
-        }
+        TestReflect testReflect = new TestReflect();
+        System.out.println(testReflect.getClass().getName());
     }
 
     private void button2MouseClicked(MouseEvent e) {
         // TODO add your code here
-        try {
-            BufferedReader bufferedReader = new BufferedReader (new FileReader("My_File.txt"));
-            String str;
-            while ((str = bufferedReader.readLine()) != null) {
-                System.out.println(str);
-            }
-            System.out.println(str);
-        } catch (IOException e1) {
-        }
-
     }
 
     private void button3MouseClicked(MouseEvent e) {
         // TODO add your code here
-        try{
-            File file = new File("c:\\test.txt");
-            if(file.delete()){
-                System.out.println(file.getName() + " 文件已被删除！");
-            }else{
-                System.out.println("文件删除失败！");
-            }
-        }catch(Exception e1){
-            e1.printStackTrace();
-        }
-
     }
 
     private void button4MouseClicked(MouseEvent e) {
@@ -93,7 +65,7 @@ public class JForm_File extends JFrame {
             panel1.setLayout(null);
 
             //---- button1 ----
-            button1.setText("Create File");
+            button1.setText("Get Class");
             button1.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -148,7 +120,7 @@ public class JForm_File extends JFrame {
     public void JForm()
     {
         initComponents();
-        JFrame f = new JFrame("JFrom_File");
+        JFrame f = new JFrame("JFrom_Reflect");
         f.getContentPane().add(panel1);
         f.setSize(700,495);             // 设置组件的大小
         f.setBackground(Color.WHITE);  // 将背景设置成白色
