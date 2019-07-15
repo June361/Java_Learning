@@ -75,8 +75,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 155
-				"y": 95
+				"x": 35
+				"y": 270
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button7"
@@ -85,8 +85,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 155
-				"y": 130
+				"x": 35
+				"y": 305
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button8"
@@ -96,7 +96,7 @@ new FormModel {
 				"width": 100
 				"height": 24
 				"x": 155
-				"y": 165
+				"y": 95
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button9"
@@ -106,7 +106,7 @@ new FormModel {
 				"width": 100
 				"height": 24
 				"x": 155
-				"y": 200
+				"y": 130
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button10"
@@ -116,7 +116,7 @@ new FormModel {
 				"width": 100
 				"height": 24
 				"x": 155
-				"y": 235
+				"y": 165
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button11"
@@ -125,8 +125,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 270
-				"y": 95
+				"x": 155
+				"y": 200
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button12"
@@ -135,8 +135,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 270
-				"y": 130
+				"x": 155
+				"y": 235
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button13"
@@ -145,8 +145,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 270
-				"y": 165
+				"x": 155
+				"y": 270
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button14"
@@ -155,8 +155,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 270
-				"y": 200
+				"x": 155
+				"y": 305
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button15"
@@ -166,7 +166,7 @@ new FormModel {
 				"width": 100
 				"height": 24
 				"x": 270
-				"y": 235
+				"y": 95
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button16"
@@ -175,8 +175,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 385
-				"y": 95
+				"x": 270
+				"y": 130
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button17"
@@ -185,8 +185,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 385
-				"y": 130
+				"x": 270
+				"y": 165
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button18"
@@ -195,8 +195,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 385
-				"y": 165
+				"x": 270
+				"y": 200
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button19"
@@ -205,8 +205,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 385
-				"y": 200
+				"x": 270
+				"y": 235
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button20"
@@ -215,8 +215,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 385
-				"y": 235
+				"x": 270
+				"y": 270
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button21"
@@ -225,8 +225,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 500
-				"y": 95
+				"x": 270
+				"y": 305
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button22"
@@ -235,8 +235,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 500
-				"y": 130
+				"x": 390
+				"y": 95
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button23"
@@ -245,8 +245,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 500
-				"y": 165
+				"x": 390
+				"y": 130
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button24"
@@ -255,8 +255,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 500
-				"y": 200
+				"x": 390
+				"y": 165
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button25"
@@ -265,8 +265,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 500
-				"y": 235
+				"x": 390
+				"y": 200
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button26"
@@ -275,8 +275,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 615
-				"y": 95
+				"x": 390
+				"y": 235
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button27"
@@ -285,8 +285,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 615
-				"y": 130
+				"x": 390
+				"y": 270
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button28"
@@ -295,8 +295,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 615
-				"y": 165
+				"x": 390
+				"y": 305
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button29"
@@ -305,8 +305,8 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 615
-				"y": 200
+				"x": 510
+				"y": 95
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button30"
@@ -315,12 +315,12 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 100
 				"height": 24
-				"x": 615
-				"y": 235
+				"x": 510
+				"y": 130
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 880, 325 )
+			"size": new java.awt.Dimension( 880, 360 )
 		} )
 	}
 }

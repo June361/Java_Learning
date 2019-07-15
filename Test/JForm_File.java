@@ -65,13 +65,26 @@ public class JForm_File extends JFrame {
     }
 
     private void button4MouseClicked(MouseEvent e) {
-        // TODO add your code here
+
+        String directories = "D:\\a\\b\\c\\d\\e\\f\\g\\h\\i";
+        File file = new File(directories);
+        boolean result = file.mkdirs();
+        System.out.println("Status = " + result);
 
     }
 
     private void button5MouseClicked(MouseEvent e) {
-        // TODO add your code here
-
+        File file = new File("/data");
+        if (file.isDirectory()) {
+            String[] files = file.list();
+            if (files.length > 0) {
+                System.out.println("目录 " + file.getPath() +" 不为空！");
+            }else {
+                System.out.println("files.length=0");
+            }
+        }else {
+            System.out.println("file.isDirectory()=False");
+        }
     }
 
     private void button6MouseClicked(MouseEvent e) {
@@ -87,6 +100,8 @@ public class JForm_File extends JFrame {
         scrollPane1 = new JScrollPane();
         textPane1 = new JTextPane();
         button3 = new JButton();
+        button4 = new JButton();
+        button5 = new JButton();
 
         //======== panel1 ========
         {
@@ -119,7 +134,7 @@ public class JForm_File extends JFrame {
                 scrollPane1.setViewportView(textPane1);
             }
             panel1.add(scrollPane1);
-            scrollPane1.setBounds(30, 45, 625, 390);
+            scrollPane1.setBounds(30, 120, 625, 315);
 
             //---- button3 ----
             button3.setText("Delete File");
@@ -131,6 +146,28 @@ public class JForm_File extends JFrame {
             });
             panel1.add(button3);
             button3.setBounds(445, 10, 195, 24);
+
+            //---- button4 ----
+            button4.setText("mkdirs()");
+            button4.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button4MouseClicked(e);
+                }
+            });
+            panel1.add(button4);
+            button4.setBounds(30, 50, 195, 24);
+
+            //---- button5 ----
+            button5.setText("file.isDirectory()");
+            button5.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button5MouseClicked(e);
+                }
+            });
+            panel1.add(button5);
+            button5.setBounds(235, 50, 195, 24);
 
             panel1.setPreferredSize(new Dimension(690, 455));
         }
@@ -144,6 +181,8 @@ public class JForm_File extends JFrame {
     private JScrollPane scrollPane1;
     private JTextPane textPane1;
     private JButton button3;
+    private JButton button4;
+    private JButton button5;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {

@@ -330,7 +330,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button6);
-        button6.setBounds(155, 95, 100, 24);
+        button6.setBounds(35, 270, 100, 24);
 
         //---- button7 ----
         button7.setText("TCP/IP");
@@ -341,7 +341,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button7);
-        button7.setBounds(155, 130, 100, 24);
+        button7.setBounds(35, 305, 100, 24);
 
         //---- button8 ----
         button8.setText("Boolean Ca");
@@ -352,7 +352,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button8);
-        button8.setBounds(155, 165, 100, 24);
+        button8.setBounds(155, 95, 100, 24);
 
         //---- button9 ----
         button9.setText("Bit Ca");
@@ -363,7 +363,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button9);
-        button9.setBounds(155, 200, 100, 24);
+        button9.setBounds(155, 130, 100, 24);
 
         //---- button10 ----
         button10.setText("Date&Time");
@@ -374,7 +374,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button10);
-        button10.setBounds(155, 235, 100, 24);
+        button10.setBounds(155, 165, 100, 24);
 
         //---- button11 ----
         button11.setText("PrimitiveType");
@@ -385,7 +385,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button11);
-        button11.setBounds(270, 95, 100, 24);
+        button11.setBounds(155, 200, 100, 24);
 
         //---- button12 ----
         button12.setText("Logic Ca");
@@ -396,7 +396,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button12);
-        button12.setBounds(270, 130, 100, 24);
+        button12.setBounds(155, 235, 100, 24);
 
         //---- button13 ----
         button13.setText("Loop");
@@ -407,7 +407,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button13);
-        button13.setBounds(270, 165, 100, 24);
+        button13.setBounds(155, 270, 100, 24);
 
         //---- button14 ----
         button14.setText("IF_Switch");
@@ -418,7 +418,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button14);
-        button14.setBounds(270, 200, 100, 24);
+        button14.setBounds(155, 305, 100, 24);
 
         //---- button15 ----
         button15.setText("Extends");
@@ -429,7 +429,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button15);
-        button15.setBounds(270, 235, 100, 24);
+        button15.setBounds(270, 95, 100, 24);
 
         //---- button16 ----
         button16.setText("HashTable");
@@ -440,7 +440,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button16);
-        button16.setBounds(385, 95, 100, 24);
+        button16.setBounds(270, 130, 100, 24);
 
         //---- button17 ----
         button17.setText("Generics");
@@ -451,7 +451,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button17);
-        button17.setBounds(385, 130, 100, 24);
+        button17.setBounds(270, 165, 100, 24);
 
         //---- button18 ----
         button18.setText("Regular Ex");
@@ -462,7 +462,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button18);
-        button18.setBounds(385, 165, 100, 24);
+        button18.setBounds(270, 200, 100, 24);
 
         //---- button19 ----
         button19.setText("Email");
@@ -473,7 +473,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button19);
-        button19.setBounds(385, 200, 100, 24);
+        button19.setBounds(270, 235, 100, 24);
 
         //---- button20 ----
         button20.setText("String[] args");
@@ -484,7 +484,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button20);
-        button20.setBounds(385, 235, 100, 24);
+        button20.setBounds(270, 270, 100, 24);
 
         //---- button21 ----
         button21.setText("JTree");
@@ -495,7 +495,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button21);
-        button21.setBounds(500, 95, 100, 24);
+        button21.setBounds(270, 305, 100, 24);
 
         //---- button22 ----
         button22.setText("Object");
@@ -506,7 +506,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button22);
-        button22.setBounds(500, 130, 100, 24);
+        button22.setBounds(390, 95, 100, 24);
 
         //---- button23 ----
         button23.setText("Variable args");
@@ -517,7 +517,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button23);
-        button23.setBounds(500, 165, 100, 24);
+        button23.setBounds(390, 130, 100, 24);
 
         //---- button24 ----
         button24.setText("Exception");
@@ -528,7 +528,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button24);
-        button24.setBounds(500, 200, 100, 24);
+        button24.setBounds(390, 165, 100, 24);
 
         //---- button25 ----
         button25.setText("Collection");
@@ -539,7 +539,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button25);
-        button25.setBounds(500, 235, 100, 24);
+        button25.setBounds(390, 200, 100, 24);
 
         //---- button26 ----
         button26.setText("Map");
@@ -550,7 +550,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button26);
-        button26.setBounds(615, 95, 100, 24);
+        button26.setBounds(390, 235, 100, 24);
 
         //---- button27 ----
         button27.setText("Socket");
@@ -561,7 +561,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button27);
-        button27.setBounds(615, 130, 100, 24);
+        button27.setBounds(390, 270, 100, 24);
 
         //---- button28 ----
         button28.setText("File");
@@ -572,7 +572,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button28);
-        button28.setBounds(615, 165, 100, 24);
+        button28.setBounds(390, 305, 100, 24);
 
         //---- button29 ----
         button29.setText("Reflect");
@@ -583,7 +583,7 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button29);
-        button29.setBounds(615, 200, 100, 24);
+        button29.setBounds(510, 95, 100, 24);
 
         //---- button30 ----
         button30.setText("System.in");
@@ -594,9 +594,9 @@ public class JForm_By_June extends JPanel
             }
         });
         add(button30);
-        button30.setBounds(615, 235, 100, 24);
+        button30.setBounds(510, 130, 100, 24);
 
-        setPreferredSize(new Dimension(880, 325));
+        setPreferredSize(new Dimension(880, 360));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
