@@ -71,8 +71,8 @@ public class JForm_By_June extends JPanel
 
     private void button3MouseClicked(MouseEvent e) {
         // TODO add your code here
-        JForm_Math jForm_Math=new JForm_Math();
-        jForm_Math.JForm();
+        JForm_Enumeration jForm_Enumeration=new JForm_Enumeration();
+        jForm_Enumeration.JForm();
     }
 
     private void button8MouseClicked(MouseEvent e) {
@@ -596,7 +596,7 @@ public class JForm_By_June extends JPanel
         add(button30);
         button30.setBounds(615, 235, 100, 24);
 
-        setPreferredSize(new Dimension(770, 325));
+        setPreferredSize(new Dimension(880, 325));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 

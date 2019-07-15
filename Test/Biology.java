@@ -18,9 +18,6 @@ public class Biology{
 
     @Override
     public String toString() {
-        return "Biology{" +
-                "sex='" + sex + '\'' +
-                ", age=" + age +
-                '}';
+        return "Biology{" +"sex='" + sex + '\'' +", age=" + age +'}';
     }
 }

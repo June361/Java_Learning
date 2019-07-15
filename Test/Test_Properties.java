@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.Nullable;
+
 import java.io.*;
 import java.util.Enumeration;
 import java.util.Properties;
@@ -5,6 +7,7 @@ import java.util.Properties;
 //关于Properties类常用的操作
 public class Test_Properties {
     //根据Key读取Value
+
     public static String GetValueByKey(String filePath, String key) {
         Properties pps = new Properties();
         try {

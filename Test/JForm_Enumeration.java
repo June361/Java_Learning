@@ -18,21 +18,23 @@ public class JForm_Enumeration {
 
     private void button1MouseClicked(MouseEvent e) {
         // TODO add your code here
-        textField1.setText(Integer.toString(Value_Table_Static.a));
+        System.out.println("所有汽车的价格：");
+        for (Enumeration_Car enumerationCar : Enumeration_Car.values())
+            System.out.println(enumerationCar + " 需要 "+ enumerationCar.getPrice() + " 千美元。");
+
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panel1 = new JPanel();
         button1 = new JButton();
-        textField1 = new JTextField();
 
         //======== panel1 ========
         {
             panel1.setLayout(null);
 
             //---- button1 ----
-            button1.setText("Start");
+            button1.setText("Show");
             button1.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -41,8 +43,6 @@ public class JForm_Enumeration {
             });
             panel1.add(button1);
             button1.setBounds(new Rectangle(new Point(35, 90), button1.getPreferredSize()));
-            panel1.add(textField1);
-            textField1.setBounds(130, 90, 165, textField1.getPreferredSize().height);
 
             { // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -61,13 +61,10 @@ public class JForm_Enumeration {
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
-    enum FreshJuiceSize{ SMALL, MEDIUM, LARGE }
-
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel panel1;
     private JButton button1;
-    private JTextField textField1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {

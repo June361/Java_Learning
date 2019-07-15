@@ -19,8 +19,7 @@ public class Animal extends Biology{
 
     @Override
     public String toString() {
-        return super.toString()+"Animal{" +
-                "name='" + name + '\'' +
+        return super.toString()+"Animal{" +"name='" + name + '\'' +
                 ", id=" + id +
                 '}';
     }

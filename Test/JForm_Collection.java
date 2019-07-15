@@ -34,6 +34,7 @@ public class JForm_Collection extends JFrame {
 
     Set_Collection_Test set_Collection_Test=new Set_Collection_Test();
 
+
     private void button1MouseClicked(MouseEvent e) {
         // TODO add your code here
 
