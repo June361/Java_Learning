@@ -2,10 +2,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.UnknownHostException;
+import java.net.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -103,12 +100,74 @@ public class JForm_Socket extends JFrame {
 
     private void button5MouseClicked(MouseEvent e) {
         // TODO add your code here
-
+        URL url = null;
+        try {
+            url = new URL("https://www.w3cschool.cn");
+        } catch (MalformedURLException ex) {
+            ex.printStackTrace();
+        }
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader
+                    (new InputStreamReader(url.openStream()));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        BufferedWriter writer = null;
+        try {
+            writer = new BufferedWriter
+                    (new FileWriter("data.html"));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        String line= "";
+        while (true) {
+            try {
+                if (!((line = reader.readLine()) != null)) break;
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+            System.out.println(line);
+            try {
+                writer.write(line);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+            try {
+                writer.newLine();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        try {
+            reader.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        try {
+            writer.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     private void button6MouseClicked(MouseEvent e) {
         // TODO add your code here
-
+        URL url = null;
+        try {
+            url = new URL("https://www.w3cschool.cn/html/html-tutorial.html");
+        } catch (MalformedURLException ex) {
+            ex.printStackTrace();
+        }
+        System.out.println("URL 是 " + url.toString());
+        System.out.println("协议是 "
+                + url.getProtocol());
+        System.out.println("文件名是 " + url.getFile());
+        System.out.println("主机是 " + url.getHost());
+        System.out.println("路径是 " + url.getPath());
+        System.out.println("端口号是 " + url.getPort());
+        System.out.println("默认端口号是 "
+                + url.getDefaultPort());
     }
 
     private void initComponents() {
@@ -120,6 +179,8 @@ public class JForm_Socket extends JFrame {
         textPane1 = new JTextPane();
         button3 = new JButton();
         button4 = new JButton();
+        button5 = new JButton();
+        button6 = new JButton();
 
         //======== panel1 ========
         {
@@ -176,6 +237,28 @@ public class JForm_Socket extends JFrame {
             panel1.add(button4);
             button4.setBounds(30, 50, 195, 24);
 
+            //---- button5 ----
+            button5.setText(" URL() ");
+            button5.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button5MouseClicked(e);
+                }
+            });
+            panel1.add(button5);
+            button5.setBounds(235, 50, 195, 24);
+
+            //---- button6 ----
+            button6.setText("url.getFile() ");
+            button6.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button6MouseClicked(e);
+                }
+            });
+            panel1.add(button6);
+            button6.setBounds(445, 50, 195, 24);
+
             panel1.setPreferredSize(new Dimension(690, 455));
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
@@ -189,6 +272,8 @@ public class JForm_Socket extends JFrame {
     private JTextPane textPane1;
     private JButton button3;
     private JButton button4;
+    private JButton button5;
+    private JButton button6;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {
