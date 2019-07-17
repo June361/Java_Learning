@@ -2,8 +2,10 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -88,7 +90,15 @@ public class JForm_Socket extends JFrame {
 
     private void button4MouseClicked(MouseEvent e) {
         // TODO add your code here
-
+        InetAddress addr = null;
+        try {
+            addr = InetAddress.getLocalHost();
+        } catch (UnknownHostException ex) {
+            ex.printStackTrace();
+        }
+        System.out.println("Local HostAddress:"+addr.getHostAddress());
+                String hostname = addr.getHostName();
+        System.out.println("Local host name: "+hostname);
     }
 
     private void button5MouseClicked(MouseEvent e) {
@@ -109,6 +119,7 @@ public class JForm_Socket extends JFrame {
         scrollPane1 = new JScrollPane();
         textPane1 = new JTextPane();
         button3 = new JButton();
+        button4 = new JButton();
 
         //======== panel1 ========
         {
@@ -141,7 +152,7 @@ public class JForm_Socket extends JFrame {
                 scrollPane1.setViewportView(textPane1);
             }
             panel1.add(scrollPane1);
-            scrollPane1.setBounds(30, 45, 625, 390);
+            scrollPane1.setBounds(30, 140, 625, 295);
 
             //---- button3 ----
             button3.setText("Port Check");
@@ -153,6 +164,17 @@ public class JForm_Socket extends JFrame {
             });
             panel1.add(button3);
             button3.setBounds(445, 10, 195, 24);
+
+            //---- button4 ----
+            button4.setText("getLocalAddress()");
+            button4.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button4MouseClicked(e);
+                }
+            });
+            panel1.add(button4);
+            button4.setBounds(30, 50, 195, 24);
 
             panel1.setPreferredSize(new Dimension(690, 455));
         }
@@ -166,6 +188,7 @@ public class JForm_Socket extends JFrame {
     private JScrollPane scrollPane1;
     private JTextPane textPane1;
     private JButton button3;
+    private JButton button4;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {

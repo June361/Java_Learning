@@ -109,6 +109,62 @@ public class JForm_File extends JFrame {
         }
     }
 
+    static void showDir(int indent, File file) throws IOException {
+        for (int i = 0; i < indent; i++)
+            System.out.print('-');
+        System.out.println(file.getName());
+        if (file.isDirectory()) {
+            File[] files = file.listFiles();
+            for (int i = 0; i < files.length; i++)
+                showDir(indent + 4, files[i]);
+        }
+    }
+
+    private void button8MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        try {
+            showDir(1, new File("C:\\Users\\Administrator\\IdeaProjects\\June_Chen"));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
+    private void button9MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        File dir = new File("C:\\Users\\Administrator\\IdeaProjects\\June_Chen");
+        File[] files = dir.listFiles();
+        FileFilter fileFilter = new FileFilter() {
+            public boolean accept(File file) {
+                return file.isDirectory();
+            }
+        };
+        files = dir.listFiles(fileFilter);
+        System.out.println(files.length);
+        if (files.length == 0) {
+            System.out.println("目录不存在或它不是一个目录");
+        }
+        else {
+            for (int i=0; i< files.length; i++) {
+                File filename = files[i];
+                System.out.println(filename.toString());
+            }
+        }
+    }
+
+    private void button10MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        System.out.println("遍历目录");
+        File dir = new File("C:\\Users\\Administrator\\IdeaProjects\\June_Chen\\src"); //要遍历的目录
+        System.out.println(dir);
+        if (dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                new File(dir, children[i]);
+            }
+        }
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panel1 = new JPanel();
@@ -121,6 +177,9 @@ public class JForm_File extends JFrame {
         button5 = new JButton();
         button6 = new JButton();
         button7 = new JButton();
+        button8 = new JButton();
+        button9 = new JButton();
+        button10 = new JButton();
 
         //======== panel1 ========
         {
@@ -210,6 +269,39 @@ public class JForm_File extends JFrame {
             panel1.add(button7);
             button7.setBounds(30, 90, 195, 24);
 
+            //---- button8 ----
+            button8.setText("file.getName()");
+            button8.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button8MouseClicked(e);
+                }
+            });
+            panel1.add(button8);
+            button8.setBounds(235, 90, 195, 24);
+
+            //---- button9 ----
+            button9.setText("dir.listFiles()");
+            button9.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button9MouseClicked(e);
+                }
+            });
+            panel1.add(button9);
+            button9.setBounds(445, 90, 195, 24);
+
+            //---- button10 ----
+            button10.setText("dir.isDirectory()");
+            button10.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button10MouseClicked(e);
+                }
+            });
+            panel1.add(button10);
+            button10.setBounds(30, 130, 195, 24);
+
             panel1.setPreferredSize(new Dimension(690, 455));
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
@@ -226,6 +318,9 @@ public class JForm_File extends JFrame {
     private JButton button5;
     private JButton button6;
     private JButton button7;
+    private JButton button8;
+    private JButton button9;
+    private JButton button10;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {
