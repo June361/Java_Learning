@@ -1,7 +1,11 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Timer;
 import javax.swing.*;
 /*
@@ -52,10 +56,39 @@ public class JForm_TCP_IP {
         System.out.println();
     }
 
+    public static String getURLContent(String urlStr) throws Exception {
+        BufferedReader br = null;
+        URL url = new URL(urlStr);
+        InputStream ins = url.openStream();
+        br = new BufferedReader(new InputStreamReader(ins));
+
+        StringBuilder sb = new StringBuilder();
+        String msg = null;
+        while ((msg = br.readLine()) != null) {
+            sb.append(msg);
+            sb.append("\n"); // Append a new line
+        }
+        br.close();
+        return sb.toString();
+    }
+
+    private void button2MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        String urlStr = "http://www.w3cschool.cn";
+        String content = null;
+        try {
+            content = getURLContent(urlStr);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        System.out.println(content);
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panel1 = new JPanel();
         button1 = new JButton();
+        button2 = new JButton();
 
         //======== panel1 ========
         {
@@ -70,7 +103,18 @@ public class JForm_TCP_IP {
                 }
             });
             panel1.add(button1);
-            button1.setBounds(new Rectangle(new Point(45, 30), button1.getPreferredSize()));
+            button1.setBounds(45, 30, 160, button1.getPreferredSize().height);
+
+            //---- button2 ----
+            button2.setText("getURLContent");
+            button2.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button2MouseClicked(e);
+                }
+            });
+            panel1.add(button2);
+            button2.setBounds(225, 30, 160, 24);
 
             { // compute preferred size
                 Dimension preferredSize = new Dimension();
@@ -95,6 +139,7 @@ public class JForm_TCP_IP {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel panel1;
     private JButton button1;
+    private JButton button2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {
