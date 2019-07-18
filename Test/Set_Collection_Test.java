@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.Contract;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -14,6 +16,7 @@ public class Set_Collection_Test{
         this.Course_to_Select=Course_to_Select;
     }
 
+    @Contract(pure = true)
     public Set_Collection_Test (){
         this.Course_to_Select=new ArrayList<Course_Collection_Test>();
     }
