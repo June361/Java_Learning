@@ -24,12 +24,23 @@ public class JForm_Reflect extends JFrame {
 
     private void button1MouseClicked(MouseEvent e) {
         // TODO add your code here
-        TestReflect testReflect = new TestReflect();
-        System.out.println(testReflect.getClass().getName());
+        try {
+            Class c = Class.forName( "JForm_Math");
+            System.out.println("about to load");
+        } catch (ClassNotFoundException e2) {
+            System.out.println(e2.getMessage());
+        }
     }
 
     private void button2MouseClicked(MouseEvent e) {
         // TODO add your code here
+        Class<TestReflect> personClass = TestReflect.class;
+        try {
+            TestReflect p = personClass.newInstance();
+            System.out.println(p);
+        } catch (InstantiationException | IllegalAccessException e1) {
+            System.out.println(e1.getMessage());        }
+
     }
 
     private void button3MouseClicked(MouseEvent e) {
@@ -65,7 +76,7 @@ public class JForm_Reflect extends JFrame {
             panel1.setLayout(null);
 
             //---- button1 ----
-            button1.setText("Get Class");
+            button1.setText("forName()");
             button1.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -76,7 +87,7 @@ public class JForm_Reflect extends JFrame {
             button1.setBounds(30, 10, 195, button1.getPreferredSize().height);
 
             //---- button2 ----
-            button2.setText("Read File");
+            button2.setText("newInstance()");
             button2.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -91,7 +102,7 @@ public class JForm_Reflect extends JFrame {
                 scrollPane1.setViewportView(textPane1);
             }
             panel1.add(scrollPane1);
-            scrollPane1.setBounds(30, 45, 625, 390);
+            scrollPane1.setBounds(30, 160, 625, 275);
 
             //---- button3 ----
             button3.setText("Delete File");

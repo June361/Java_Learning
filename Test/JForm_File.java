@@ -165,6 +165,52 @@ public class JForm_File extends JFrame {
         }
     }
 
+    private void button11MouseClicked(MouseEvent e){
+        // TODO add your code here
+        File temp = null;
+        try {
+            temp = File.createTempFile("pattern", ".suffix");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        temp.deleteOnExit();
+        BufferedWriter out = null;
+        try {
+            out = new BufferedWriter(new FileWriter(temp));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        try {
+            out.write("aString");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        System.out.println("临时文件已创建:");
+        try {
+            out.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    private void button12MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        File oldName = new File("C:/program.txt");
+        File newName = new File("C:/java.txt");
+        if(oldName.renameTo(newName)) {
+            System.out.println("已重命名");
+        } else {
+            System.out.println("Error");
+        }
+    }
+
+    private void button13MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        File file = new File("C:/java.txt");
+        System.out.println(file.setReadOnly());
+        System.out.println(file.canWrite());
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panel1 = new JPanel();
@@ -180,6 +226,9 @@ public class JForm_File extends JFrame {
         button8 = new JButton();
         button9 = new JButton();
         button10 = new JButton();
+        button11 = new JButton();
+        button12 = new JButton();
+        button13 = new JButton();
 
         //======== panel1 ========
         {
@@ -302,6 +351,39 @@ public class JForm_File extends JFrame {
             panel1.add(button10);
             button10.setBounds(30, 130, 195, 24);
 
+            //---- button11 ----
+            button11.setText("createTempFile() ");
+            button11.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button11MouseClicked(e);
+                }
+            });
+            panel1.add(button11);
+            button11.setBounds(235, 130, 195, 24);
+
+            //---- button12 ----
+            button12.setText("oldName.renameTo(newName)");
+            button12.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button12MouseClicked(e);
+                }
+            });
+            panel1.add(button12);
+            button12.setBounds(445, 130, 195, 24);
+
+            //---- button13 ----
+            button13.setText("file.setReadOnly()");
+            button13.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button13MouseClicked(e);
+                }
+            });
+            panel1.add(button13);
+            button13.setBounds(30, 165, 195, 24);
+
             panel1.setPreferredSize(new Dimension(690, 455));
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
@@ -321,6 +403,9 @@ public class JForm_File extends JFrame {
     private JButton button8;
     private JButton button9;
     private JButton button10;
+    private JButton button11;
+    private JButton button12;
+    private JButton button13;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {
