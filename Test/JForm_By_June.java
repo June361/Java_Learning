@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
@@ -223,6 +225,12 @@ public class JForm_By_June extends JPanel
         jForm_Factorial.JForm();
     }
 
+    private void button7MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        JForm_TCP_IP jForm_TCP_IP=new JForm_TCP_IP();
+        jForm_TCP_IP.JForm();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
@@ -345,7 +353,7 @@ public class JForm_By_June extends JPanel
         button7.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                button3MouseClicked(e);
+                button7MouseClicked(e);
             }
         });
         add(button7);
@@ -620,7 +628,7 @@ public class JForm_By_June extends JPanel
     }
 
     @JForm_By_June_Annotation
-    public static void main(String[] args)
+    public static void main(@NotNull String[] args)
     {
         JFrame f = new JFrame("JForm_By_June");
 
