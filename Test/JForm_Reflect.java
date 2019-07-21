@@ -25,8 +25,8 @@ public class JForm_Reflect extends JFrame {
     private void button1MouseClicked(MouseEvent e) {
         // TODO add your code here
         try {
-            Class c = Class.forName( "JForm_Math");
-            System.out.println("about to load");
+            Class<?> Clazz = Class.forName( "FB");
+                System.out.println(Clazz);
         } catch (ClassNotFoundException e2) {
             System.out.println(e2.getMessage());
         }
@@ -34,17 +34,30 @@ public class JForm_Reflect extends JFrame {
 
     private void button2MouseClicked(MouseEvent e) {
         // TODO add your code here
-        Class<TestReflect> personClass = TestReflect.class;
         try {
-            TestReflect p = personClass.newInstance();
-            System.out.println(p);
-        } catch (InstantiationException | IllegalAccessException e1) {
-            System.out.println(e1.getMessage());        }
+            Class<?> Clazz = Class.forName( "FB");
 
+            Constructor<?>[] constructors= Clazz.getConstructors();
+            for(Constructor<?> constructor:constructors){
+                System.out.println(constructor);
+            }
+        } catch (ClassNotFoundException e2) {
+            System.out.println(e2.getMessage());
+        }
     }
 
     private void button3MouseClicked(MouseEvent e) {
         // TODO add your code here
+        try {
+            Class<?> Clazz = Class.forName( "FB");
+
+            Method[] methods= Clazz.getMethods();
+            for(Method method:methods){
+                System.out.println(method);
+            }
+        } catch (ClassNotFoundException e2) {
+            System.out.println(e2.getMessage());
+        }
     }
 
     private void button4MouseClicked(MouseEvent e) {
@@ -76,7 +89,7 @@ public class JForm_Reflect extends JFrame {
             panel1.setLayout(null);
 
             //---- button1 ----
-            button1.setText("forName()");
+            button1.setText("Class.forName()");
             button1.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -87,7 +100,7 @@ public class JForm_Reflect extends JFrame {
             button1.setBounds(30, 10, 195, button1.getPreferredSize().height);
 
             //---- button2 ----
-            button2.setText("newInstance()");
+            button2.setText("Clazz.getConstructors()");
             button2.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -102,10 +115,10 @@ public class JForm_Reflect extends JFrame {
                 scrollPane1.setViewportView(textPane1);
             }
             panel1.add(scrollPane1);
-            scrollPane1.setBounds(30, 160, 625, 275);
+            scrollPane1.setBounds(30, 115, 625, 320);
 
             //---- button3 ----
-            button3.setText("Delete File");
+            button3.setText("Clazz.getMethods()");
             button3.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {

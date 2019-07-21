@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.BufferedReader;
@@ -56,6 +58,7 @@ public class JForm_TCP_IP {
         System.out.println();
     }
 
+    @NotNull
     public static String getURLContent(String urlStr) throws Exception {
         BufferedReader br = null;
         URL url = new URL(urlStr);
