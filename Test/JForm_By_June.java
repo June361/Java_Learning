@@ -52,6 +52,7 @@ public class JForm_By_June extends JPanel
     private JButton button29;
     private JButton button30;
     private JButton button31;
+    private JButton button32;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
 
@@ -231,6 +232,12 @@ public class JForm_By_June extends JPanel
         jForm_TCP_IP.JForm();
     }
 
+    private void button32MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        JForm_Spring_IoC jForm_Spring_IoC=new JForm_Spring_IoC();
+        jForm_Spring_IoC.JForm();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
@@ -266,6 +273,7 @@ public class JForm_By_June extends JPanel
         button29 = new JButton();
         button30 = new JButton();
         button31 = new JButton();
+        button32 = new JButton();
 
         //======== this ========
         setLayout(null);
@@ -622,6 +630,17 @@ public class JForm_By_June extends JPanel
         });
         add(button31);
         button31.setBounds(510, 165, 100, 24);
+
+        //---- button32 ----
+        button32.setText("Spring IoC");
+        button32.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button32MouseClicked(e);
+            }
+        });
+        add(button32);
+        button32.setBounds(510, 200, 100, 24);
 
         setPreferredSize(new Dimension(880, 360));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
