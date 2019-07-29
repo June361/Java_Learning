@@ -18,6 +18,7 @@ public class IoCContainer {
      * @param beanID beanID
      * @return 返回bean
      */
+
     public Object getBean(String beanID){
         return beans.get(beanID);
     }
@@ -39,7 +40,6 @@ public class IoCContainer {
         try {
             for (Constructor<?> constructor:clazz.getConstructors()) {
                 bean=constructor.newInstance(paramValues);
-
            }
         } catch (InstantiationException e) {
         } catch (IllegalAccessException e) {

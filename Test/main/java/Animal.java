@@ -1,6 +1,14 @@
 public class Animal extends Biology{
     private String name;
     private int id;
+
+    /**
+     *
+     * @param myName
+     * @param myid
+     * @param mySex
+     * @param myAge
+     */
     public Animal(String myName, int myid,String mySex,int myAge) {
         super(mySex,myAge);
         name = myName;

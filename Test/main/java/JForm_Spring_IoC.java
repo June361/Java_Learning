@@ -1,4 +1,7 @@
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -34,16 +37,23 @@ public class JForm_Spring_IoC extends JFrame {
          * 3.修改依赖关系将是一件很容易的事情
          */
 
-
         ioCContainer.setBean(Audi.class, "audi");
         ioCContainer.setBean(Buick.class, "buick");
         ioCContainer.setBean(ZhangSan.class, "zhangsan","audi");
         ioCContainer.setBean(LiSi.class, "lisi","buick");
 
         Humen zhangsan=(Humen) ioCContainer.getBean("zhangsan");
-        zhangsan.HoHome();
         Humen lisi=(Humen) ioCContainer.getBean("lisi");
+
+        zhangsan.HoHome();
         lisi.HoHome();
+    }
+
+    private void button2MouseClicked(MouseEvent e) {
+        // TODO add your code here
+        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring.xml");
+        Bean bean=applicationContext.getBean("bean",Bean.class);
+        System.out.println("bean = "+bean);
     }
 
     private void initComponents() {
@@ -52,6 +62,7 @@ public class JForm_Spring_IoC extends JFrame {
         button1 = new JButton();
         scrollPane1 = new JScrollPane();
         textPane1 = new JTextPane();
+        button2 = new JButton();
 
         //======== panel1 ========
         {
@@ -75,6 +86,17 @@ public class JForm_Spring_IoC extends JFrame {
             panel1.add(scrollPane1);
             scrollPane1.setBounds(30, 45, 625, 390);
 
+            //---- button2 ----
+            button2.setText("Bean Test");
+            button2.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button2MouseClicked(e);
+                }
+            });
+            panel1.add(button2);
+            button2.setBounds(260, 10, 220, 24);
+
             panel1.setPreferredSize(new Dimension(690, 455));
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
@@ -85,16 +107,17 @@ public class JForm_Spring_IoC extends JFrame {
     private JButton button1;
     private JScrollPane scrollPane1;
     private JTextPane textPane1;
+    private JButton button2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {
         initComponents();
         JFrame f = new JFrame("JFrom_Spring_IoC");
         f.getContentPane().add(panel1);
-        f.setSize(700,495);             // 设置组件的大小
-        f.setBackground(Color.WHITE);  // 将背景设置成白色
-        f.setLocation(300,200);        // 设置组件的显示位置
+        f.setSize(700,495);              // 设置组件的大小
+        f.setBackground(Color.WHITE);                    // 将背景设置成白色
+        f.setLocation(300,200);                  // 设置组件的显示位置
         f.setLocationRelativeTo( null);
-        f.setVisible(true);       // 让组件可见
+        f.setVisible(true);                              // 让组件可见
     }
 }
