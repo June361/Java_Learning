@@ -51,9 +51,11 @@ public class JForm_Spring_IoC extends JFrame {
 
     private void button2MouseClicked(MouseEvent e) {
         // TODO add your code here
+
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring.xml");
         Bean bean=applicationContext.getBean("bean",Bean.class);
         System.out.println("bean = "+bean);
+
     }
 
     private void initComponents() {
@@ -63,6 +65,7 @@ public class JForm_Spring_IoC extends JFrame {
         scrollPane1 = new JScrollPane();
         textPane1 = new JTextPane();
         button2 = new JButton();
+        button3 = new JButton();
 
         //======== panel1 ========
         {
@@ -77,14 +80,14 @@ public class JForm_Spring_IoC extends JFrame {
                 }
             });
             panel1.add(button1);
-            button1.setBounds(30, 10, 220, button1.getPreferredSize().height);
+            button1.setBounds(30, 10, 205, button1.getPreferredSize().height);
 
             //======== scrollPane1 ========
             {
                 scrollPane1.setViewportView(textPane1);
             }
             panel1.add(scrollPane1);
-            scrollPane1.setBounds(30, 45, 625, 390);
+            scrollPane1.setBounds(30, 140, 625, 295);
 
             //---- button2 ----
             button2.setText("Bean Test");
@@ -95,7 +98,18 @@ public class JForm_Spring_IoC extends JFrame {
                 }
             });
             panel1.add(button2);
-            button2.setBounds(260, 10, 220, 24);
+            button2.setBounds(240, 10, 205, 24);
+
+            //---- button3 ----
+            button3.setText("Bean Test");
+            button3.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    button2MouseClicked(e);
+                }
+            });
+            panel1.add(button3);
+            button3.setBounds(450, 10, 205, 24);
 
             panel1.setPreferredSize(new Dimension(690, 455));
         }
@@ -108,6 +122,7 @@ public class JForm_Spring_IoC extends JFrame {
     private JScrollPane scrollPane1;
     private JTextPane textPane1;
     private JButton button2;
+    private JButton button3;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public void JForm()
     {
